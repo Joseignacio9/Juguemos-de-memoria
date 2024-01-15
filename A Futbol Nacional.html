@@ -20,13 +20,13 @@
 
         header {
             margin: 50px 0;
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             width: 100%;
             padding: 20px 0;
         }
 
         #highlight-box {
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             padding: 10px;
             margin-bottom: 20px;
             display: flex;
@@ -41,19 +41,10 @@
             margin-right: 15px;
         }
 
-        #more-sports-dropdown {
-            background-color: lime;
-            padding: 10px;
+        select {
+            margin-left: auto; /* Empuja el menú a la derecha */
+            padding: 8px;
             border-radius: 5px;
-        }
-
-        #more-sports-dropdown select {
-            background-color: white;
-            color: black;
-        }
-
-        #more-sports-dropdown select option {
-            color: black;
         }
 
         .news-container {
@@ -111,7 +102,7 @@
             display: inline-block;
             margin-top: 10px;
             padding: 5px 10px;
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -127,6 +118,33 @@
                 width: calc(100% - 20px);
             }
         }
+        @media screen and (max-width: 768px) {
+    /* ... (existing styles) ... */
+
+    #highlight-box div {
+        display: none; /* Hide the text on smaller screens */
+    }
+
+    #highlight-box select {
+        display: block; /* Show the select on smaller screens */
+    }
+}
+@media screen and (max-width: 768px) {
+    /* ... (existing styles) ... */
+    select {
+                margin: 10px 0; /* Añade margen en dispositivos más pequeños */
+            }
+    .news-box {
+        width: 100%; /* Set the width to 100% for responsiveness on smaller screens */
+    }
+    #highlight-box div {
+        display: none; /* Hide the text on smaller screens */
+    }
+
+    #highlight-box select {
+        display: block; /* Show the select on smaller screens */
+    }
+}
     </style>
 </head>
 <body>
@@ -141,8 +159,7 @@
                 <a href="A Tennis.html" style="font-size: 18px;">Tenis</a>
                 <a href="A Quienes somos.html" style="font-size: 18px;">Quiénes somos</a>
             </div>
-            <div id="more-sports-dropdown">
-                <select>
+                <select onchange="location = this.value;">
                     <option value="#" selected>Más deportes</option>
                     <option value="A index.html">Página principal</option>
                     <option value="A Futbol internacional.html">Fútbol Internacional</option>
@@ -161,13 +178,13 @@
     <div class="news-container">
         <div class="news-box">
             <div class="news-title">
-                <a href="#">Zenón, durísimo por la falta de definición de su pase a Boca: "Deberían preguntarle al presidente de Unión que es el que pone trabas”</a>
+                <a href="A Prueba Noticia.Html">Zenón, durísimo por la falta de definición de su pase a Boca: "Deberían preguntarle al presidente de Unión que es el que pone trabas”</a>
             </div>
             <div class="news-date">Fecha: 14 de enero de 2024</div>
             <div class="news-author">Autor: José Ignacio Avila</div>
             <img class="news-image" src="Zenon.png" alt="Imagen de la Noticia 1">
             <div class="news-summary">El jugador explotó contra Luis Spahn ante la dilatación de las negociaciones. "Tengo la cabeza en cualquier lado. Necesito que todo esto se defina lo más rápido posible para estar más tranquilo", afirmó.</div>
-            <a href="A_Prueba_Noticia" class="read-more-button">Ver más</a>
+            <a href="A Prueba Noticia.Html" class="read-more-button">Ver más</a>
         </div>
     </div>
 

@@ -20,13 +20,13 @@
 
         header {
             margin: 50px 0;
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             width: 100%;
             padding: 20px 0;
         }
 
         #highlight-box {
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             padding: 10px;
             margin-bottom: 20px;
             display: flex;
@@ -41,19 +41,10 @@
             margin-right: 15px;
         }
 
-        #more-sports-dropdown {
-            background-color: lime;
-            padding: 10px;
+        select {
+            margin-left: auto; /* Empuja el menú a la derecha */
+            padding: 8px;
             border-radius: 5px;
-        }
-
-        #more-sports-dropdown select {
-            background-color: white;
-            color: black;
-        }
-
-        #more-sports-dropdown select option {
-            color: black;
         }
 
         .news-container {
@@ -150,11 +141,11 @@
                 <a href="A Tennis.html" style="font-size: 18px;">Tenis</a>
                 <a href="A Quienes somos.html" style="font-size: 18px;">Quiénes somos</a>
             </div>
-            <div id="more-sports-dropdown">
-                <select>
+                <select onchange="location = this.value;">
                     <option value="#" selected>Más deportes</option>
                     <option value="A index.html">Página principal</option>
-                    <option value="A Futbol Internaciona.html">Fútbol Internacional</option>
+                    <option value="A Futbol nacional.html">Fútbol nacional</option>
+                    <option value="A Futbol Internacional.html">Fútbol Internacional</option>
                     <option value="A Golf.html">Golf</option>
                     <option value="A Tenni.html">Tenis</option>
                     <option value="A Quienes somos.html">Quiénes somos</option>
@@ -175,7 +166,7 @@
     <img class="main-news-image" src="Licha.png" alt="Imagen Principal de la Noticia">
 
     <div class="author-info">
-        <img class="author-photo" src="José Web.jpeg" alt="Foto del Autor">
+        <img class="author-photo" src="José escribe.jpeg" alt="Foto del Autor">
         <div class="author-details">
             <p>José Ignacio Avila</p>
             <p>Fecha de Publicación: 14 de enero de 2024 | Hora: 18:14</p>
