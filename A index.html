@@ -217,6 +217,33 @@
             .subcuadro-imagen {
                 max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
             }
+            
+            .mosaico-container {
+                flex-direction: column; /* Cambia la dirección a columna para mosaicos */
+            }
+
+            .mosaico-item {
+                width: 100%; /* Ocupa todo el ancho en dispositivos más pequeños */
+            }
+
+            .mosaico-item a {
+                display: block; /* Asegura que el hipervínculo ocupe todo el ancho disponible */
+            }
+        }
+        @media screen and (min-width: 769px) {
+            /* Muestra el texto del rectángulo solo en dispositivos de escritorio */
+            .botones-container div {
+                display: block;
+            }
+
+            /* Oculta el menú desplegable en dispositivos de escritorio */
+            .mas-deportes-mobile {
+                display: none;
+            }
+
+            .mas-deportes-desktop {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -250,6 +277,15 @@
                 <option value="A Tennis.html">Tenis</option>
                 <option value="A Quienes somos.html">Quiénes somos</option>
             </select>
+                <!-- Menú desplegable para dispositivos móviles -->
+                <select class="mas-deportes-mobile" onchange="location = this.value;">
+                    <option value="#" selected disabled>Más deportes</option>
+                    <option value="A futbol Nacional.html">Fútbol Nacional</option>
+                    <option value="A Golf.html">Golf</option>
+                    <option value="A Tennis.html">Tenis</option>
+                    <option value="A Quienes somos.html">Quiénes somos</option>
+                </select>
+            </div>
         </div>
 
         <!-- Mosaico con imágenes y cuadros de texto -->
@@ -267,6 +303,7 @@
                 <div class="mosaico-text"><a href="A Djkovic.html">El sufrido debut de Novak Djokovic en el Abierto de Australia</a></div>
             </div>
         </div>
+    
 
         <!-- Sección de noticias -->
         <div class="noticias-section">
