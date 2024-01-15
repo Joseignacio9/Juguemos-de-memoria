@@ -115,49 +115,24 @@
         }
 
         @media screen and (max-width: 768px) {
-        
-            .botones-container {
-                flex-direction: column; /* Cambia la dirección de los botones a columna */
-                align-items: center; /* Centra los elementos */
-            }
+    /* ... (existing styles) ... */
 
-            select {
-                margin: 10px 0; /* Añade margen en dispositivos más pequeños */
-            }
+    /* Show the text in the highlight-box and hide the select on mobile devices */
+    #highlight-box div {
+        display: block;
+    }
 
-            /* Oculta el texto del rectángulo en dispositivos móviles */
-            .botones-container div {
-                display: none;
-            }
+    #highlight-box select {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* ... (existing styles) ... */
 
-            /* Muestra el menú desplegable solo en dispositivos móviles */
-            .mas-deportes-mobile {
-                display: block;
-            }
-
-            .mas-deportes-desktop {
-                display: none;
-            }
-
-    
-        }
-
-        /* Media query para dispositivos mayores a 768px */
-        @media screen and (min-width: 769px) {
-            /* Muestra el texto del rectángulo solo en dispositivos de escritorio */
-            .botones-container div {
-                display: block;
-            }
-
-            /* Oculta el menú desplegable en dispositivos de escritorio */
-            .mas-deportes-mobile {
-                display: none;
-            }
-
-            .mas-deportes-desktop {
-                display: block;
-            }
-        }
+    .news-box {
+        width: 100%; /* Set the width to 100% for responsiveness on smaller screens */
+    }
+}
     </style>
 </head>
 <body>
