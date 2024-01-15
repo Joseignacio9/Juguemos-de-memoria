@@ -20,13 +20,13 @@
 
         header {
             margin: 50px 0;
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             width: 100%;
             padding: 20px 0;
         }
 
         #highlight-box {
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             padding: 10px;
             margin-bottom: 20px;
             display: flex;
@@ -41,20 +41,13 @@
             margin-right: 15px;
         }
 
-        #more-sports-dropdown {
-            background-color: lime;
-            padding: 10px;
+         /* Estilos para el menú desplegable */
+ select {
+            margin-left: auto; /* Empuja el menú a la derecha */
+            padding: 8px;
             border-radius: 5px;
         }
 
-        #more-sports-dropdown select {
-            background-color: white;
-            color: black;
-        }
-
-        #more-sports-dropdown select option {
-            color: black;
-        }
 
         .news-container {
             display: flex;
@@ -111,7 +104,7 @@
             display: inline-block;
             margin-top: 10px;
             padding: 5px 10px;
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -127,12 +120,39 @@
                 width: calc(100% - 20px);
             }
         }
+        @media screen and (max-width: 768px) {
+    /* ... (existing styles) ... */
+
+    #highlight-box div {
+        display: none; /* Hide the text on smaller screens */
+    }
+
+    #highlight-box select {
+        display: block; /* Show the select on smaller screens */
+    }
+}
+@media screen and (max-width: 768px) {
+    /* ... (existing styles) ... */
+    select {
+                margin: 10px 0; /* Añade margen en dispositivos más pequeños */
+            }
+    .news-box {
+        width: 100%; /* Set the width to 100% for responsiveness on smaller screens */
+    }
+    #highlight-box div {
+        display: none; /* Hide the text on smaller screens */
+    }
+
+    #highlight-box select {
+        display: block; /* Show the select on smaller screens */
+    }
+}
     </style>
 </head>
 <body>
 
     <header>
-        <h1 style="color: white;">Bienvenido a Futbol Nacional</h1>
+        <h1 style="color: white;">Bienvenido a Golf</h1>
         <div id="highlight-box">
             <div>
                 <a href="A index.html" style="font-size: 18px;">Página principal</a>
@@ -141,15 +161,14 @@
                 <a href="A Tennis.html" style="font-size: 18px;">Tenis</a>
                 <a href="A Quienes somos.html" style="font-size: 18px;">Quiénes somos</a>
             </div>
-            <div id="more-sports-dropdown">
-                <select>
-                    <option value="#" selected>Más deportes</option>
-                    <option value="A index.html">Página principal</option>
-                    <option value="A Futbol Nacional.html">Fútbol Nacional</option>
-                    <option value="A Futbol internacional.html">Fútbol Internacional</option>
-                    <option value="A Tennis.html">Tenis</option>
-                    <option value="A Quienes somos.html">Quiénes somos</option>
-                </select>
+            <select onchange="location = this.value;">
+                <option value="#" selected disabled>Más deportes</option>
+                <option value="A futbol Nacional.html">Fútbol Nacional</option>
+                <option value="A futbol Internacional.html">Fútbol Internacional</option>
+                <option value="A Golf.html">Golf</option>
+                <option value="A Tennis.html">Tenis</option>
+                <option value="A Quienes somos.html">Quiénes somos</option>
+            </select>
             </div>
         </div>
     </header>
