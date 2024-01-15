@@ -20,13 +20,13 @@
 
         header {
             margin: 50px 0;
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             width: 100%;
             padding: 20px 0;
         }
 
         #highlight-box {
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             padding: 10px;
             margin-bottom: 20px;
             display: flex;
@@ -41,19 +41,11 @@
             margin-right: 15px;
         }
 
-        #more-sports-dropdown {
-            background-color: lime;
-            padding: 10px;
+ /* Estilos para el menú desplegable */
+ select {
+            margin-left: auto; /* Empuja el menú a la derecha */
+            padding: 8px;
             border-radius: 5px;
-        }
-
-        #more-sports-dropdown select {
-            background-color: white;
-            color: black;
-        }
-
-        #more-sports-dropdown select option {
-            color: black;
         }
 
         .news-container {
@@ -111,7 +103,7 @@
             display: inline-block;
             margin-top: 10px;
             padding: 5px 10px;
-            background-color: lime;
+            background-color: rgb(15, 51, 131);
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -123,8 +115,72 @@
         }
 
         @media screen and (max-width: 768px) {
-            .news-box {
-                width: calc(100% - 20px);
+            header img {
+                max-width: 50%; /* Ajusta el tamaño de la imagen del logo */
+            }
+
+            .botones-container {
+                flex-direction: column; /* Cambia la dirección de los botones a columna */
+                align-items: center; /* Centra los elementos */
+            }
+
+            select {
+                margin: 10px 0; /* Añade margen en dispositivos más pequeños */
+            }
+
+            /* Oculta el texto del rectángulo en dispositivos móviles */
+            .botones-container div {
+                display: none;
+            }
+
+            /* Muestra el menú desplegable solo en dispositivos móviles */
+            .mas-deportes-mobile {
+                display: block;
+            }
+
+            .mas-deportes-desktop {
+                display: none;
+            }
+
+            /* Otros estilos específicos para dispositivos móviles */
+            .noticia-principal,
+            .subcuadro {
+                width: 100%; /* Ocupa todo el ancho en dispositivos más pequeños */
+            }
+
+            .noticia-imagen,
+            .subcuadro-imagen,
+            .mosaico-item img {
+                max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+            }
+
+            .mosaico-container {
+                flex-direction: column; /* Cambia la dirección a columna para mosaicos */
+            }
+
+            .mosaico-item {
+                width: 100%; /* Ocupa todo el ancho en dispositivos más pequeños */
+            }
+
+            .mosaico-item a {
+                display: block; /* Asegura que el hipervínculo ocupe todo el ancho disponible */
+            }
+        }
+
+        /* Media query para dispositivos mayores a 768px */
+        @media screen and (min-width: 769px) {
+            /* Muestra el texto del rectángulo solo en dispositivos de escritorio */
+            .botones-container div {
+                display: block;
+            }
+
+            /* Oculta el menú desplegable en dispositivos de escritorio */
+            .mas-deportes-mobile {
+                display: none;
+            }
+
+            .mas-deportes-desktop {
+                display: block;
             }
         }
     </style>
@@ -141,13 +197,11 @@
                 <a href="A Golf.html" style="font-size: 18px;">Golf</a>
                 <a href="A Quienes somos.html" style="font-size: 18px;">Quiénes somos</a>
             </div>
-            <div id="more-sports-dropdown">
-                <select>
-                    <option value="#" selected>Más deportes</option>
-                    <option value="A index.html">Página principal</option>
-                    <option value="A Futbol Nacional.html">Fútbol Nacional</option>
-                    <option value="A Futbol Internacional.html">Fútbol Internacional</option>
+                <select onchange="location = this.value;">
+                    <option value="#" selected disabled>Más deportes</option>
+                    <option value="A futbol Nacional.html">Fútbol Nacional</option>
                     <option value="A Golf.html">Golf</option>
+                    <option value="A Tennis.html">Tenis</option>
                     <option value="A Quienes somos.html">Quiénes somos</option>
                 </select>
             </div>
