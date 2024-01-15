@@ -191,15 +191,36 @@
     object-fit: cover; /* Evita que la imagen se estire y mantiene su forma original */
 }
 /* Media queries para dispositivos más pequeños */
-@media screen and (max-width: 768px) {
-    .mosaico-item {
-        flex: 0 0 calc(100% - 20px);
-    }
 
-    .subcuadro {
-        width: calc(100% - 20px);
-    }
-}
+        /* Media query para dispositivos más pequeños */
+        @media screen and (max-width: 768px) {
+            header img {
+                max-width: 50%; /* Ajusta el tamaño de la imagen del logo */
+            }
+
+            .botones-container {
+                flex-direction: column; /* Cambia la dirección de los botones a columna */
+                align-items: center; /* Centra los elementos */
+            }
+
+            select {
+                margin: 10px 0; /* Añade margen en dispositivos más pequeños */
+            }
+
+            /* Otros estilos específicos para dispositivos móviles */
+            .noticia-principal,
+            .subcuadro {
+                width: 100%; /* Ocupa todo el ancho en dispositivos más pequeños */
+            }
+
+            .noticia-imagen,
+            .subcuadro-imagen {
+                max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+            }
+        }
+    </style>
+</head>
+<body>
     </style>
 </head>
 <body>
