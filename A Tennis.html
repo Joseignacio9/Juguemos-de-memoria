@@ -117,13 +117,12 @@
         @media screen and (max-width: 768px) {
     /* ... (existing styles) ... */
 
-    /* Show the text in the highlight-box and hide the select on mobile devices */
     #highlight-box div {
-        display: block;
+        display: none; /* Hide the text on smaller screens */
     }
 
     #highlight-box select {
-        display: none;
+        display: block; /* Show the select on smaller screens */
     }
 }
 @media screen and (max-width: 768px) {
@@ -131,6 +130,13 @@
 
     .news-box {
         width: 100%; /* Set the width to 100% for responsiveness on smaller screens */
+    }
+    #highlight-box div {
+        display: none; /* Hide the text on smaller screens */
+    }
+
+    #highlight-box select {
+        display: block; /* Show the select on smaller screens */
     }
 }
     </style>
