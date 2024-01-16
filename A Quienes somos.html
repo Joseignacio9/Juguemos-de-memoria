@@ -25,12 +25,13 @@
             padding: 20px 0;
         }
 
+ 
         #highlight-box {
             background-color: rgb(15, 51, 131);
             padding: 10px;
             margin-bottom: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             width: 100%;
         }
 
@@ -39,13 +40,14 @@
             color: white;
             font-size: 18px;
             margin-right: 15px;
-        }   
-        select {
+        }
+
+ /* Estilos para el menú desplegable */
+ select {
             margin-left: auto; /* Empuja el menú a la derecha */
             padding: 8px;
             border-radius: 5px;
         }
-
         .news-title {
             text-align: center;
             font-size: 24px;
@@ -158,6 +160,17 @@
 }
 
 }
+@media screen and (max-width: 480px) {
+
+#highlight-box div {
+  display: none; 
+}
+
+#highlight-box select {
+  display: block;
+}
+
+}
     </style>
 </head>
 <body>
@@ -172,6 +185,8 @@
                 <a href="A Tennis.html" style="font-size: 18px;">Tenis</a>
                 <a href="A Golf.html" style="font-size: 18px;">Golf</a>
                 <div style="text-align: right; margin-right: 20px;">
+
+
                     <select onchange="location = this.value;">
                         <option value="#" selected disabled>Más deportes</option>
                         <option value="A index.html">Pagina Principal</option>
@@ -180,6 +195,7 @@
                         <option value="Golf.html">Golf</option>
                         <option value="Tennis.html">Tenis</option>
                         <option value="Quienes_somos.html">Quiénes somos</option>
+                       
                     </select>
                 </div>
                 
