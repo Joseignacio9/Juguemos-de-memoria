@@ -112,24 +112,19 @@
   object-fit: cover;
 }
 
-
-
 @media screen and (max-width: 768px) {
-    /* ... (existing styles) ... */
-    select {
-                margin: 10px 0; /* Añade margen en dispositivos más pequeños */
+            /* Oculta los botones en pantallas más pequeñas */
+            #highlight-box div {
+                display: none;
             }
-    news-box {
-        width: 100%; /* Set the width to 100% for responsiveness on smaller screens */
-    }
-    #highlight-box div {
-        display: none; /* Hide the text on smaller screens */
-    }
 
-     select {
-        display: block; /* Show the select on smaller screens */
-    }
-}
+            /* Muestra el menú desplegable en pantallas más pequeñas */
+            #highlight-box select {
+                display: block;
+            }
+        }
+
+
 @media screen and (max-width: 768px) {
 
 .author-box {
@@ -139,13 +134,6 @@
 .author-image {
   width: 75px;
   height: 75px;
-}
-#highlight-box div {
-  display: none; 
-}
-
-#highlight-box select {
-  display: block;
 }
 }
 
