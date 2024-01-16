@@ -104,14 +104,12 @@
     margin: 0 auto;
 }
 
-.author-box {
-    width: calc(25% - 20px);
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: left;
+.author-image {
+  width: 100px; 
+  height: 100px;
+  object-fit: cover;
 }
+
         @media screen and (max-width: 768px) {
     .mosaico-item {
         flex: 0 0 calc(100% - 20px);
@@ -147,6 +145,18 @@
     #highlight-box select {
         display: block; /* Show the select on smaller screens */
     }
+}
+@media screen and (max-width: 768px) {
+
+.author-box {
+  width: 100%;
+}
+
+.author-image {
+  width: 75px;
+  height: 75px;
+}
+
 }
     </style>
 </head>
